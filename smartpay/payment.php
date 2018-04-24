@@ -33,8 +33,8 @@ function buildWeChatTestParams()
     $context = stream_context_create($opts);
     $result = file_get_contents("http://wxpay.wxutil.com/pub_v2/app/app_pay.php", false, $context);
     //截取出正确的json
-    $new_result = substr($result, strripos($result, "{"), strlen($result) - 1);
-    return $new_result;
+    //$new_result = substr($result, strripos($result, "{"), strlen($result) - 1);
+    return $result;
 }
 
 /**
